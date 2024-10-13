@@ -1,11 +1,9 @@
-// script.js
-
-// Alert message when the page loads
-window.onload = function() {
-  alert("Welcome to my first web page!");
-};
-
-// Function to change the text when button is clicked
-function changeText() {
-  document.getElementById("myParagraph").innerText = "You clicked the button!";
-}
+// Smooth scroll functionality for navigation menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
